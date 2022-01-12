@@ -9,18 +9,20 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="stylesheet" href="./Shop-assets/CSS/base.css">
     <link rel="stylesheet" href="./Shop-assets/CSS/main.css">
+    <link rel="stylesheet" href="./Shop-assets/CSS/grid.css">
+    <link rel="stylesheet" href="./Shop-assets/CSS/responsive.css">
     <link rel="stylesheet" href="./Shop-assets/font/fontawesome-free-5.15.4/css/all.min.css">
 </head>
 <body>
     <div class="app">
         <header class="header">
-            <div class="grid">
-                <nav class="header__navbar">
+            <div class="grid wide">
+                <!-- -------- Header with Navigation ---------- -->
+                <nav class="header__navbar hide-on-mobile-tablet">
                     <ul class="header__navbar-list">
                         <li class="header__navbar-item header__navbar-item--sepprate">Kênh người bán</li>
                         <li class="header__navbar-item header__navbar-item--sepprate">Trở thành người bán</li>
-                        <li class="header__navbar-item header__navbar-item--hasqr header__navbar-item--sepprate">
-                            Tải ứng dụng
+                        <li class="header__navbar-item header__navbar-item--hasqr header__navbar-item--sepprate">Tải ứng dụng
                             <div class="header__qr header__baccau">
                                 <img src="./Shop-assets/img/qr_code.png" alt="QR CODE" class="header__qr-img">
                                 <div class="header__qr-apps">
@@ -181,7 +183,10 @@
 
                 <!-- Header with search -->
                 <div class="header-with-search">
-                    <div class="header__logo">
+                    <label for="mobile-search-checkbox" class="header__mobile-search">
+                        <i class="header__mobile-search-icon fas fa-search"></i>
+                    </label>
+                    <div class="header__logo hide-on-tablet">
                         <a href="/" class="header__logo-link">
                             <svg viewBox="0 0 192 65" class="header__logo-img">
                                 <g fill-rule="evenodd">
@@ -303,13 +308,31 @@
                         </div>
                     </div>
                 </div>
+                
             </div>
+            <ul class="header__sort-bar">
+                <li class="header__sort-item">
+                    <a href="" class="header__sort-link">Liên quan</a>
+                </li>
+                <li class="header__sort-item header__sort-item--active">
+                    <a href="" class="header__sort-link">Mới nhất</a>
+                </li>
+                <li class="header__sort-item">
+                    <a href="" class="header__sort-link">Bán chạy</a>
+                </li>
+                <li class="header__sort-item">
+                    <a href="" class="header__sort-link">
+                        Giá
+
+                    </a>
+                </li>
+            </ul>
         </header>
 
         <div class="app__container">
-           <div class="grid">
+           <div class="grid wide">
             <div class="grid__row app__content">
-                <div class="grid__column-2">
+                <div class="col l-2 m-0 c-0">
                     <nav class="category">
                         <h3 class="category__heading">Danh mục</h3>
         
@@ -338,8 +361,8 @@
                     </nav>
                 </div>
 
-                <div class="grid__column-10">
-                    <div class="home-filter">
+                <div class="col l-10 m-12 c-12">
+                    <div class="home-filter hide-on-mobile-tablet">
                         <span class="home-filter-label">Sắp xếp theo</span>
                         <button class="home-filter__btn btn">Phổ biến</button>
                         <button class="home-filter__btn btn btn--primary">Mới nhất</button>
@@ -372,12 +395,62 @@
                             </div>
                         </div>
                     </div>
+                    <!-- Danh mục -->
+                    <nav class="mobile-category">
+                        <ul class="mobile-category__list">
+                            <li class="mobile-category__item">
+                                <a href="#" class="mobile-category__link">
+                                    Dụng cụ & Thiết bị cần thiết
+                                </a>
+                            </li>
+                            <li class="mobile-category__item">
+                                <a href="#" class="mobile-category__link">
+                                    Dụng cụ & Thiết bị cần thiết
+                                </a>
+                            </li>
+                            <li class="mobile-category__item">
+                                <a href="#" class="mobile-category__link">
+                                    Dụng cụ & Thiết bị cần thiết
+                                </a>
+                            </li>
+                            <li class="mobile-category__item">
+                                <a href="#" class="mobile-category__link">
+                                    Dụng cụ & Thiết bị cần thiết
+                                </a>
+                            </li>
+                            <li class="mobile-category__item">
+                                <a href="#" class="mobile-category__link">
+                                    Dụng cụ & Thiết bị cần thiết
+                                </a>
+                            </li>
+                            <li class="mobile-category__item">
+                                <a href="#" class="mobile-category__link">
+                                    Dụng cụ & Thiết bị cần thiết
+                                </a>
+                            </li>
+                            <li class="mobile-category__item">
+                                <a href="#" class="mobile-category__link">
+                                    Dụng cụ & Thiết bị cần thiết
+                                </a>
+                            </li>
+                            <li class="mobile-category__item">
+                                <a href="#" class="mobile-category__link">
+                                    Dụng cụ & Thiết bị cần thiết
+                                </a>
+                            </li>
+                            <li class="mobile-category__item">
+                                <a href="#" class="mobile-category__link">
+                                    Dụng cụ & Thiết bị cần thiết
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
 
                     <div class="home-product">
-                        <div class="grid__row">
+                        <div class="row sm-gutter"">
                             <!-- Product -->
                                 <!-- Product 1 -->
-                            <div class="grid__column-2-4">
+                            <div class="col l-2-4 m-4 c-6"">
                                 <a href="#" class="home-product-item">
                                     <div class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/e5ffaf3087c52f65405d0f135eac5b7e_tn);"></div>
                                     <h4 class="home-product-item__name">Newpower Sổ tay học sinh phiên bản Hàn Quốc hình trái tim cô gái dễ thương Sổ tay nhật ký khổ A5</h4>
@@ -414,7 +487,7 @@
                                 </a>
                             </div>
                                 <!-- Product 2 -->
-                            <div class="grid__column-2-4">
+                            <div class="col l-2-4 m-4 c-6">
                                 <a href="" class="home-product-item">
                                     <div class="home-product-item__img" style="background-image: url(https://product.hstatic.net/200000159347/product/1d1f52dbab8e4a5da45c91f8cf1456bf_b4a0fa2e06254dc9a4331a5ac253c87e_master.jpeg);"></div>
                                     <h4 class="home-product-item__name"> Sổ tay sticker giấy ghi chú đa chức năng hoạt hình dễ thương Ngôi Nhà – WOOOW5</h4>
@@ -451,7 +524,7 @@
                                 </a>
                             </div>
                                 <!-- Product 3 -->
-                            <div class="grid__column-2-4">
+                            <div class="col l-2-4 m-4 c-6">
                                 <a href="" class="home-product-item">
                                     <div class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/207f878d218c4aa0acf04e0018c1986e);"></div>
                                     <h4 class="home-product-item__name">Set 50 Chiếc Khẩu trang 4 Lớp KF94 UNI MASK Chống Bụi Mịn Và Kháng Khuẩn Hàng Cao Cấp.</h4>
@@ -489,7 +562,7 @@
                                 </a>
                             </div>
                                 <!-- Product 4  -->
-                            <div class="grid__column-2-4">
+                            <div class="col l-2-4 m-4 c-6">
                                 <a href="" class="home-product-item">
                                     <div class="home-product-item__img" style="background-image: url(https://www.lifebuoy.vn/sk-eu/content/dam/brands/lifebuoy/vietnam/53916683-fop-hw-bao-ve---do-500g.png.rendition.1960.1960.png);"></div>
                                     <h4 class="home-product-item__name">
@@ -527,7 +600,7 @@
                                 </a>
                             </div>
                                 <!-- Product 5 -->
-                            <div class="grid__column-2-4">
+                            <div class="col l-2-4 m-4 c-6">
                                 <a href="" class="home-product-item">
                                     <div class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/7e624960cdbc97ed557759524ab34062);"></div>
                                     <h4 class="home-product-item__name">Truyện Tranh Ngụ Ngôn Dành Cho Thiếu Nhi - Cò Và Cáo</h4>
@@ -564,7 +637,7 @@
                                 </a>
                             </div>
                                 <!-- Product 6 -->
-                            <div class="grid__column-2-4">
+                            <div class="col l-2-4 m-4 c-6">
                                 <a href="" class="home-product-item">
                                     <div class="home-product-item__img" style="background-image: url(https://dorahome.info/wp-content/uploads/2021/09/truyen-ngan-doremon-doc-xuoi-1996-vol-41.jpg);"></div>
                                     <h4 class="home-product-item__name">Bộ truyện tranh thiếu nhi Nhật Bản Doraemon</h4>
@@ -601,7 +674,7 @@
                                 </a>
                             </div>
                                 <!-- Product 7 -->
-                            <div class="grid__column-2-4">
+                            <div class="col l-2-4 m-4 c-6">
                                 <a href="" class="home-product-item">
                                     <div class="home-product-item__img" style="background-image: url(https://salt.tikicdn.com/ts/product/55/88/d9/eda9103e8ce3d313263661cf40d88476.jpg);"></div>
                                     <h4 class="home-product-item__name">Combo Cảm Ơn Người Lớn + Cho Tôi Xin Một Vé Đi Tuổi Thơ (Bìa Cứng)</h4>
@@ -638,7 +711,7 @@
                                 </a>
                             </div>
                                 <!-- Product 8 -->
-                            <div class="grid__column-2-4">
+                            <div class="col l-2-4 m-4 c-6">
                                 <a href="" class="home-product-item">
                                     <div class="home-product-item__img" style="background-image: url(https://trenkesach.com/wp-content/uploads/2017/08/chuyen-con-meo-day-hai-au-bay-tom-tat.jpg);"></div>
                                     <h4 class="home-product-item__name">Con mèo dạy hải âu bay</h4>
@@ -675,7 +748,7 @@
                                 </a>
                             </div>
                             <!-- Product 9 -->
-                            <div class="grid__column-2-4">
+                            <div class="col l-2-4 m-4 c-6">
                                 <a href="" class="home-product-item">
                                     <div class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/de3d2e0ee1294f466b9c0cf32c65f05b);"></div>
                                     <h4 class="home-product-item__name">Naruto Artbook</h4>
@@ -713,7 +786,7 @@
                             </div>
                             
                             <!-- Product 10 -->
-                            <div class="grid__column-2-4">
+                            <div class="col l-2-4 m-4 c-6">
                                 <a href="" class="home-product-item">
                                     <div class="home-product-item__img" style="background-image: url(https://bloganchoi.com/wp-content/uploads/2021/08/bia-truyen-co-tien-xanh.jpg);"></div>
                                     <h4 class="home-product-item__name">Sách Cô tiên xanh combo 16 quyển</h4>
@@ -794,111 +867,92 @@
         </div>
 
         <footer class="footer">
-            <div class="grid">
-                <div class="grid__row">
-                    <div class="grid__column-2-4">
-                        <h3 class="footer__heading">CHĂM SÓC KHÁCH HÀNG</h3>
+            <div class="grid wide footer__content">
+                <div class="row">
+                    <div class="col l-2-4 m-4 c-6">
+                        <h3 class="footer__heading">Chăm sóc khách hàng</h3>
                         <ul class="footer-list">
                             <li class="footer-item">
-                                <a href="#" class="footer-item__link">Trung tâm trợ giúp</a>
+                                <a href="" class="footer-item__link footer-item__icon">Trung tâm trợ giúp</a>
                             </li>
                             <li class="footer-item">
-                                <a href="#" class="footer-item__link">Hướng dẫn mua hàng</a>
+                                <a href="" class="footer-item__link footer-item__icon">F8-Shop Mail</a>
                             </li>
                             <li class="footer-item">
-                                <a href="#" class="footer-item__link">Hướng dẫn bán hàng</a>
-                            </li>
-                            <li class="footer-item">
-                                <a href="#" class="footer-item__link">Thanh toán</a>
-                            </li>
-                            <li class="footer-item">
-                                <a href="#" class="footer-item__link">Chính sách bảo hành</a>
+                                <a href="" class="footer-item__link footer-item__icon">Hướng dẫn mua hàng</a>
                             </li>
                         </ul>
                     </div>
-
-                    <div class="grid__column-2-4">
-                        <h3 class="footer__heading">VỀ CHÚNG TÔI</h3>
+                    <div class="col l-2-4 m-4 c-6">
+                        <h3 class="footer__heading">Giới thiệu</h3>
                         <ul class="footer-list">
                             <li class="footer-item">
-                                <a href="#" class="footer-item__link">Tuyển dụng</a>
+                                <a href="" class="footer-item__link">Trung tâm trợ giúp</a>
                             </li>
                             <li class="footer-item">
-                                <a href="#" class="footer-item__link">Chính sách bảo mật</a>
+                                <a href="" class="footer-item__link">F8-Shop Mail</a>
                             </li>
                             <li class="footer-item">
-                                <a href="#" class="footer-item__link">Chính hãng</a>
-                            </li>
-                            <li class="footer-item">
-                                <a href="#" class="footer-item__link">Flash Sales</a>
+                                <a href="" class="footer-item__link">Hướng dẫn mua hàng</a>
                             </li>
                         </ul>
                     </div>
-
-                    <div class="grid__column-2-4">
-                        <h3 class="footer__heading">THANH TOÁN</h3>
-                        <ul class="payment-list">
+                    <div class="col l-2-4 m-4 c-6">
+                        <h3 class="footer__heading">Danh mục</h3>
+                        <ul class="footer-list">
                             <li class="footer-item">
-                                <i class="payment-item-icon fab fa-cc-visa"></i>
+                                <a href="" class="footer-item__link">Kem dưỡng da</a>
                             </li>
                             <li class="footer-item">
-                                <i class="payment-item-icon fab fa-cc-mastercard"></i>
+                                <a href="" class="footer-item__link">Kem dưỡng mặt</a>
                             </li>
                             <li class="footer-item">
-                                <i class="payment-item-icon fab fa-cc-jcb"></i>
-                            </li>
-                            <li class="footer-item">
-                                <i class="payment-item-icon fab fa-cc-amex"></i>
+                                <a href="" class="footer-item__link">Kem chống nắng</a>
                             </li>
                         </ul>
                     </div>
-
-                    <div class="grid__column-2-4">
-                        <h3 class="footer__heading">THEO DÕI CHÚNG TÔI TRÊN</h3>
+                    <div class="col l-2-4 m-4 c-6">
+                        <h3 class="footer__heading">Theo dõi</h3>
                         <ul class="footer-list">
                             <li class="footer-item">
-                                <a href="#" class="footer-item__link">
+                                <a href="" class="footer-item__link">
                                     <i class="footer-item__icon fab fa-facebook"></i>
-                                    <span>Facebook</span>
+                                    Facebook
                                 </a>
                             </li>
-                            <li class="footer-item__icon footer-item"> 
-                                <a href="#" class="footer-item__link">
-                                    <i class="footer-item__icon fab fa-instagram-square"></i>
-                                    <span>Instagram</span>
-                                </a></li>
                             <li class="footer-item">
-                                <a href="#" class="footer-item__link">
+                                <a href="" class="footer-item__link">
+                                    <i class="footer-item__icon fab fa-instagram"></i>
+                                    Instagram
+                                </a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="" class="footer-item__link">
                                     <i class="footer-item__icon fab fa-linkedin"></i>
-                                    <span>LinkedIn</span>
+                                    Linkedin
                                 </a>
                             </li>
                         </ul>
                     </div>
-
-                    <div class="grid__column-2-4">
-                        <h3 class="footer__heading">TẢI ỨNG DỤNG NGAY THÔI</h3>
+                    <div class="col l-2-4 m-8 c-12">
+                        <h3 class="footer__heading">Vào cửa hàng trên ứng dụng</h3>
                         <div class="footer__download">
-                            <img src="/Shop-assets/img/qr_code.png" alt="" class="footer__download-qr">
+                            <img src="./Shop-assets/img/qr_code.png" alt="Download QR" class="footer__download-qr"/>
                             <div class="footer__download-apps">
                                 <a href="" class="footer__download-app-link">
-                                    <img src="/Shop-assets/img/google_play.png" alt="Google play" class="footer__download-apps-img">
+                                    <img src="/./Shop-assets/img/google_play.png" alt="Google play" class="footer__download-app-img">
                                 </a>
                                 <a href="" class="footer__download-app-link">
-                                    <img src="/Shop-assets/img/app_store.png" alt="download QR" class="footer__download-apps-img">
+                                    <img src="./Shop-assets/img/app_store.png" alt="App store" class="footer__download-app-img">
                                 </a>
-                                <a href="" class="footer__download-app-link">
-                                    <img src="/Shop-assets/img/appgallery.png" alt="download Appgallery" class="footer__download-apps-img">
-                                </a>  
                             </div>
                         </div>
                     </div>
-                </div>  
+                </div>
             </div>
 
-            <div class="footer-bottom">
-                <div class="grid">
-                    <p class="footer__text">© 2022 F8Shop. Tất cả các quyền được bảo lưu.</p>
+                <div class="grid wide">
+                    <p class="footer__text">© 2021 - Bản quyền thuộc về Công ty MyCV</p>
                 </div>
             </div>
         </footer>

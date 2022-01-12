@@ -9,6 +9,7 @@
     --header-height: 120px
     --navbar-height: 34px;
     --header-with-search-height: calc(var(var(--header-height) - var(--navbar-height)));
+    --header-sort-bar-height: 46px;
 }
 
 * {
@@ -27,18 +28,6 @@ html {
 }
 
 /* ----- Respponsive ------- */
-.grid {
-    width: 1200px;
-    /* Mà hình kích thước bé hơn 1200px thì tự động co lại phù hợp */
-    max-width: 100%;
-    /* Căn gữa nội dung */
-    margin: 0 auto;
-}
-
-.grid__full-width {
-    width: 100%;
-}
-
 .grid__row {
     display: flex;
     /* tổng độ dài thằng con dài hơn cha tự động xuống hàng */
@@ -133,6 +122,7 @@ html {
     --growth-from: 0.7;
     --growth-to: 1;
     margin: auto;
+    position: relative;
     z-index: 1;
     animation: growth linear 0.1s;
 }
@@ -187,7 +177,6 @@ html {
     border-radius: 2px;
     display: flex;
     height: 34px;
-    min-width: 200px;
     padding: 0 12px;
     align-items: center;
     justify-content: space-between;
